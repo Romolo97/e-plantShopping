@@ -265,8 +265,6 @@ function ProductList({ onHomeClick }) {
             [product.name]: true, 
         }));
     };
-    dispatch(addItem(product));
-    dispatch(removeItem(item.name));
     const cartItems = useSelector(state => state.cart.items);
     const calculateTotalQuantity = () => { return cartItems ? cartItems.reduce((total, item) => total + item.quantity, 0) : 0; };
 
